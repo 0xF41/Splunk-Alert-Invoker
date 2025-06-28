@@ -70,17 +70,16 @@
 SCRIPT_NAME="trigger_saved_search_query.sh" # Name of this script (for logging and safety checks)
 
 SPLUNK_HOME="${SPLUNK_HOME:-/opt/splunk}" # Splunk installation directory (default: /opt/splunk)
-SPLUNK_TOKEN="${SPLUNK_TOKEN:-eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJhc3RhIGZyb20gV0VCLTAxIiwic3ViIjoiYXN0YSIsImF1ZCI6Im9wZW5jdGkgdHJpZ2dlciByZXRybyB1YyIsImlkcCI6IlNwbHVuayIsImp0aSI6IjBkYmQ5ZTQwZTE4NGEwNzQ5ZmY3ZDNmYTVlNTRlZTI3YTY3ZDhhZjFlM2VhZjVhODZkYzUyY2E4NjEyZTcwYmEiLCJpYXQiOjE3NTA5NDQ0MjMsImV4cCI6MTc1MzUzNjQyMywibmJyIjoxNzUwOTQ0NDIzfQ.WO-KEgE_aSb6rgjb-ccLOjZK1v3u-tsxKWbbaGHUSaC2VC4nBW7lpigH0-sWxdTnw8XBLNszjMZUf2lniMR-tw}" # Splunk authentication token (Bearer token)
+SPLUNK_TOKEN="${SPLUNK_TOKEN:-changeme}" # Splunk authentication token (Bearer token)
 
 SPLUNK_MANAGEMENT_ENDPOINT="${SPLUNK_MANAGEMENT_ENDPOINT:-https://localhost:8089}" # Splunk REST API endpoint (default: https://localhost:8089)
-OWNER="${OWNER:-asta}" # Owner of the saved searches
+OWNER="${OWNER:-changeme}" # Owner of the saved searches
 APP="${APP:-search}" # Splunk app context (default: search)
 
 # List of alert names to trigger (must match saved search names exactly)
 ALERTS=(
-  "OpenCTI IOC Retro SQ - Inbound Traffic from Regulatory IOC IP"
-  "OpenCTI IOC Retro SQ - Outbound Traffic towards Regulatory IOC IP"
-  "OpenCTI IOC Retro SQ - Threat Detection based on Regulatory IOC Filehash"
+  "Saved Alert 1 CHANGEME"
+  "Saved Alert 2 CHANGEME"
 )
 
 # ===========================================================
