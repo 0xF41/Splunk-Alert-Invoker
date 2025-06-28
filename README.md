@@ -1,14 +1,9 @@
 # trigger_saved_search_query.sh
 
----
 
 ## Description
 
-- This script triggers specific Splunk saved searches defined in the `ALERTS` array.
-- Saved searches (alerts or reports configured on the Splunk Web UI) are triggered individually.
-- The script can be triggered as an action in Splunk alerts or run manually via a bash shell
-
----
+This script is designed to trigger specific Splunk saved searches (Alerts or reports configured through the Splunk Web UI) individually. It can be executed from a Bash shell or used as a triggered action within a Splunk alert.
 
 ## Usage
 
@@ -20,7 +15,6 @@
 
 > ⚠️ **WARNING:** Do **not** create infinite loops by triggering this script from an alert that it itself triggers.
 
----
 
 ## Key Features
 
@@ -32,7 +26,6 @@
 - URL-safe encoding for search names with special characters
 - Uses **secure token-based authentication**
 
----
 
 ## Requirements
 
@@ -45,7 +38,6 @@
 - Network access to the Splunk management interface (default: `https://localhost:8089`)
 - Bash shell environment (Linux/Unix)
 
----
 
 ## 🔧 Environment Variables
 
@@ -58,7 +50,6 @@
 | `ENABLE_LOGGING`             | Enable file logging (default: `true`)                          |
 | `SPLUNK_HOME`                | Splunk installation path (default: `/opt/splunk`)              |
 
----
 
 ## Output
 
@@ -67,7 +58,6 @@
   `$SPLUNK_HOME/var/log/splunk/trigger_saved_search_query.sh.log`
 - Search IDs (SIDs) for monitoring search progress in Splunk
 
----
 
 ## Exit Codes
 
@@ -76,7 +66,6 @@
 | `0`  | Success (all searches triggered or no matches)   |
 | `1`  | Configuration validation failed or critical error|
 
----
 
 ## Security Notes
 
